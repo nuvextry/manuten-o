@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Hospedagem e manutenção | Nuvextry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--p:#660066;--pd:#4a004a;--pl:#ecdcec;--bg:#f3eee8;--bg2:#e9e2da;--t:#1c1a1d;--g:#5f5964;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Manrope",system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.65;padding-bottom:76px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:68px 0}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
+h1{font-size:clamp(2.1rem,8vw,3.8rem);font-weight:800}
+h2{font-size:clamp(1.6rem,5vw,2.3rem);font-weight:800;margin-bottom:12px}
+h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.sub{color:var(--g);max-width:600px;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;border:1.5px solid var(--p);text-align:center;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.bp{background:var(--p);color:var(--bg)}.bp:hover{background:var(--pd)}
+.bs{color:var(--p)}.bs:hover{background:var(--pl)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+header{position:sticky;top:0;z-index:20;background:rgba(243,238,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bg2)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-weight:800;font-size:1.25rem;color:var(--p);text-decoration:none}
+header .btn{padding:10px 16px;font-size:.85rem}
+.hero{padding:64px 0 72px}
+.hero p{margin:18px 0 26px;color:var(--g);font-size:1.1rem;max-width:560px}
+.grid{display:grid;gap:16px}
+.card{background:var(--w);border-radius:16px;padding:26px}
+.card p,.card li{color:var(--g);font-size:.95rem}
+.alt{background:var(--w)}.alt .card{background:var(--bg)}
+.plan{display:flex;flex-direction:column;border:1.5px solid transparent}
+.plan.hl{border-color:var(--p);position:relative}
+.plan.hl:before{content:"Mais completo e conveniente";position:absolute;top:-13px;left:20px;background:var(--p);color:var(--bg);font-size:.78rem;font-weight:700;padding:3px 12px;border-radius:99px}
+.preco{font-size:2rem;font-weight:800;color:var(--p);margin:8px 0 14px}
+.preco small{font-size:.9rem;font-weight:600;color:var(--g)}
+.plan .desc{color:var(--g);font-size:.92rem;margin-bottom:14px}.plan h4{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--p);margin-bottom:8px}.plan .ideal{font-size:.88rem;color:var(--g);border-top:1px solid var(--bg2);padding-top:12px;margin-bottom:18px}.plan ul{list-style:none;display:grid;gap:8px;margin-bottom:14px}.plan .out{font-size:.88rem;font-weight:600;color:var(--p);background:var(--pl);border-radius:10px;padding:8px 12px;margin-bottom:14px}.plan .ideal{flex:1}.tag{display:inline-block;font-size:.76rem;font-weight:700;color:var(--p);background:var(--pl);padding:3px 10px;border-radius:99px;margin-bottom:10px;align-self:flex-start}.plan.hl .tag{background:var(--p);color:var(--bg)}.ind{border-left:5px solid var(--p);background:var(--w);margin:0 0 24px;font-size:1rem}.guia{display:grid;gap:12px}.guia div{background:var(--w);border-radius:14px;padding:16px 20px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between}.guia span{color:var(--g);font-size:.95rem}.guia b{color:var(--p)}
+.plan li{padding-left:24px;position:relative}
+.plan li:before{content:"";position:absolute;left:0;top:.5em;width:12px;height:7px;border-left:3px solid var(--p);border-bottom:3px solid var(--p);transform:rotate(-45deg)}
+.note{margin-top:24px;background:var(--pl);border-radius:14px;padding:18px 22px;font-size:.95rem}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--w);border-radius:16px;padding:22px}
+.step:before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:1.6rem;color:var(--p);min-width:40px}
+.step p{color:var(--g);font-size:.95rem}
+details{background:var(--w);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--p);font-size:1.4rem;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin-top:12px;color:var(--g);font-size:.95rem}
+footer{background:var(--t);color:#cfc9d3;padding:40px 0 24px;margin-top:40px}
+footer strong{color:#fff;font-size:1.2rem}
+footer small{display:block;margin-top:16px;opacity:.65}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(243,238,232,.96);border-top:1px solid var(--bg2)}
+.bar .btn{display:block}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(min-width:768px){
+ .g2{grid-template-columns:1fr 1fr}.guia{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}
+ .bar{display:none}body{padding-bottom:0}section{padding:88px 0}
+}
+@media(min-width:1000px){.g4{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a href="#inicio" class="logo">Nuvextry</a>
+ <a class="btn bp" href="https://wa.me/5591980354795?text=Ol%C3%A1!%20Sou%20cliente%20da%20Nuvextry%20e%20quero%20falar%20sobre%20hospedagem%20e%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar no WhatsApp</a>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+ <span class="tag">Exclusivo para clientes da Nuvextry</span>
+ <h1>Hospedagem e manutenção para o seu site ou landing page</h1>
+ <p>Esta página é somente para quem já tem um site ou uma landing page feita pela Nuvextry. Escolha o plano que faz sentido para você.</p>
+ <div class="row"><a class="btn bp" href="#planos">Ver planos</a><a class="btn bs" href="https://wa.me/5591980354795?text=Ol%C3%A1!%20Sou%20cliente%20da%20Nuvextry%20e%20quero%20falar%20sobre%20hospedagem%20e%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+</div></section>
+
+<section class="alt"><div class="wrap rv">
+ <h2>O que cada serviço faz</h2>
+ <p class="sub">Duas coisas diferentes, que você pode contratar juntas ou separadas.</p>
+ <div class="grid g2">
+  <div class="card"><h3>Hospedagem</h3><p>Mantém o seu site publicado e funcionando na internet, para que as pessoas consigam acessá-lo.</p></div>
+  <div class="card"><h3>Manutenção</h3><p>É a Nuvextry fazendo as alterações que você pedir no seu site, como trocar textos e imagens.</p></div>
+ </div>
+</div></section>
+
+<section id="planos"><div class="wrap rv">
+ <h2>Planos</h2>
+ <p class="sub">Veja o que você paga, quanto custa e o que recebe. Valores mensais, sem complicação.</p>
+ <div class="note ind"><b>Cada plano é individual.</b> Você <b>não precisa</b> contratar Hospedagem e Manutenção juntas. A única exceção é o plano <b>Completo</b>, que já reúne os dois em um só.</div>
+ <div class="grid g4">
+  <div class="card plan"><span class="tag">Plano individual</span><h3>Hospedagem</h3><div class="preco">R$ 24,90<small>/mês</small></div><p class="desc">Para quem quer apenas manter o site publicado e funcionando na internet.</p><h4>O que recebe</h4><ul><li>Publicação do site</li><li>Hospedagem do site</li><li>Site disponível para acesso online</li><li>Manutenção técnica básica necessária para manter o site funcionando</li></ul><p class="out">Não inclui alterações no conteúdo do site.</p><p class="ideal"><b>Ideal para:</b> Quem só quer o site no ar.</p><a class="btn bs" href="https://wa.me/5591980354795?text=Ol%C3%A1%21%20Quero%20contratar%20o%20plano%20Hospedagem%20%28R%24%2024%2C90%2Fm%C3%AAs%29." target="_blank" rel="noopener">Contratar</a></div>
+  <div class="card plan"><span class="tag">Plano individual</span><h3>Manutenção</h3><div class="preco">R$ 59,90<small>/mês</small></div><p class="desc">Para quem já tem hospedagem e quer a Nuvextry fazendo alterações no site.</p><h4>O que recebe</h4><ul><li>Até 3 alterações por mês</li><li>Atualização de textos</li><li>Troca de imagens</li><li>Pequenas alterações de informações</li><li>Ajustes simples no conteúdo do site</li></ul><p class="out">A hospedagem não está incluída.</p><p class="ideal"><b>Ideal para:</b> Quem já tem hospedagem e quer mudar coisas no site com frequência.</p><a class="btn bs" href="https://wa.me/5591980354795?text=Ol%C3%A1%21%20Quero%20contratar%20o%20plano%20Manuten%C3%A7%C3%A3o%20%28R%24%2059%2C90%2Fm%C3%AAs%29." target="_blank" rel="noopener">Contratar</a></div>
+  <div class="card plan hl"><span class="tag">Hospedagem + Manutenção juntas</span><h3>Completo</h3><div class="preco">R$ 79,90<small>/mês</small></div><p class="desc">Reúne hospedagem e manutenção em um único pacote. Para quem quer deixar tudo com a Nuvextry.</p><h4>O que recebe</h4><ul><li>Hospedagem do site</li><li>Publicação e manutenção do site online</li><li>Até 4 alterações por mês</li><li>Atualização de textos</li><li>Troca de imagens</li><li>Pequenos ajustes de conteúdo</li><li>Suporte relacionado ao site</li></ul><p class="ideal"><b>Ideal para:</b> Quem quer o pacote mais completo e não quer se preocupar com nada.</p><a class="btn bp" href="https://wa.me/5591980354795?text=Ol%C3%A1%21%20Quero%20contratar%20o%20plano%20Completo%20%28R%24%2079%2C90%2Fm%C3%AAs%29." target="_blank" rel="noopener">Contratar</a></div>
+  <div class="card plan"><span class="tag">Plano individual · sem mensalidade</span><h3>Alteração avulsa</h3><div class="preco">R$ 39,90<small></small></div><p class="desc">Para quem não tem plano de manutenção e precisa fazer uma alteração pontual.</p><h4>O que recebe</h4><ul><li>Até 2 alterações em uma solicitação</li><li>Alteração de textos</li><li>Troca de imagens</li><li>Pequenos ajustes de conteúdo</li></ul><p class="out">Cobrado separadamente. Não é assinatura mensal.</p><p class="ideal"><b>Ideal para:</b> Quem precisa de um ajuste de vez em quando.</p><a class="btn bs" href="https://wa.me/5591980354795?text=Ol%C3%A1%21%20Quero%20solicitar%20uma%20altera%C3%A7%C3%A3o%20avulsa%20%28R%24%2039%2C90%29." target="_blank" rel="noopener">Contratar</a></div>
+ </div>
+
+ <div class="note"><b>Sobre o endereço do site:</b> usamos um endereço gratuito do GitHub Pages. Domínio próprio (um endereço só seu, como seunome.com.br) não está incluso em nenhum plano.</div>
+
+ <h3 style="margin:44px 0 14px;font-size:1.4rem">Qual plano serve para você?</h3>
+ <div class="guia">
+  <div><span>Só quero o site no ar</span><b>Hospedagem</b></div>
+  <div><span>Já tenho hospedagem e quero mudar coisas no site</span><b>Manutenção</b></div>
+  <div><span>Quero deixar tudo com a Nuvextry</span><b>Completo</b></div>
+  <div><span>Preciso de um ajuste pontual, sem mensalidade</span><b>Alteração avulsa</b></div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap rv">
+ <h2>Como funciona</h2>
+ <div class="steps" style="margin-top:28px">
+  <div class="step"><div><h3>Você escolhe o plano</h3><p>Veja acima o que faz mais sentido para o seu site.</p></div></div>
+  <div class="step"><div><h3>Combinamos os detalhes</h3><p>Conversamos pelo WhatsApp para alinhar tudo.</p></div></div>
+  <div class="step"><div><h3>Cuidamos do seu site</h3><p>Todos os meses, de acordo com o plano contratado.</p></div></div>
+ </div>
+</div></section>
+
+<section><div class="wrap rv" style="max-width:760px">
+ <h2>Perguntas frequentes</h2>
+ <p class="sub">Respostas rápidas para as dúvidas mais comuns.</p>
+ <details><summary>O que está incluso em cada plano?</summary><p>A Hospedagem inclui publicação, hospedagem e manutenção técnica básica do site. A Manutenção inclui até 3 alterações por mês (sem hospedagem). O Completo reúne os dois e inclui até 4 alterações por mês. Domínio próprio não está incluso.</p></details>
+ <details><summary>Preciso contratar hospedagem e manutenção juntas?</summary><p>Não. Cada plano pode ser contratado separadamente. O Completo reúne os dois e sai mais barato do que contratar cada um. Só lembre que, para a manutenção, o site precisa estar hospedado em algum lugar.</p></details>
+ <details><summary>Qual a diferença entre manutenção e alteração avulsa?</summary><p>A manutenção é mensal e inclui até 3 alterações por mês. A alteração avulsa é para quem não tem plano: você paga R$ 39,90 só quando pedir, com até 2 alterações em uma solicitação.</p></details>
+ <details><summary>Como funcionam as alterações?</summary><p>Você chama a Nuvextry pelo WhatsApp, conta o que deseja e nós avaliamos o que é possível fazer. Na manutenção, até 3 alterações por mês estão incluídas (no Completo, até 4). Sem plano, a alteração avulsa custa R$ 39,90 e inclui até 2 alterações em uma solicitação.</p></details>
+ <details><summary>Como peço uma alteração?</summary><p>É só chamar a Nuvextry no WhatsApp e dizer o que você quer mudar.</p></details>
+ <details><summary>Posso cancelar quando quiser?</summary><p>Combinamos pelo WhatsApp.</p></details>
+ <details><summary>Como faço o pagamento?</summary><p>Combinamos pelo WhatsApp.</p></details>
+</div></section>
+
+<section class="alt"><div class="wrap rv">
+ <h2>Fale com a Nuvextry</h2>
+ <p class="sub">Escolha o canal mais fácil para você.</p>
+ <div class="row">
+  <a class="btn bp" href="https://wa.me/5591980354795?text=Ol%C3%A1!%20Sou%20cliente%20da%20Nuvextry%20e%20quero%20falar%20sobre%20hospedagem%20e%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn bs" href="https://instagram.com/nuvextry" target="_blank" rel="noopener">Instagram</a>
+  <a class="btn bs" href="mailto:nuvextry@gmail.com">E-mail</a>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><strong>Nuvextry</strong><p>Tecnologia, design e soluções digitais.</p><small>© 2026 Nuvextry. Todos os direitos reservados.</small></div></footer>
+
+<div class="bar"><a class="btn bp" href="https://wa.me/5591980354795?text=Ol%C3%A1!%20Sou%20cliente%20da%20Nuvextry%20e%20quero%20falar%20sobre%20hospedagem%20e%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+if("IntersectionObserver" in window){
+ document.documentElement.classList.add("js");
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.08});
+ document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+}
+</script>
+</body>
+</html>
